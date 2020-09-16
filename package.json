@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YuliyaBaskakova3012.github.io/react-app",
+  "homepage": "https://github.com/YuliyaBaskakova3012/react-table-app",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
