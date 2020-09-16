@@ -16,7 +16,7 @@ class App extends Component {
     isLoading: false,
     data: [],
     search: '',
-    sort: 'asc',  
+    sort: 'desc',  
     sortField: 'id',
     row: null,
     currentPage: 0,
@@ -49,7 +49,7 @@ async fetchData(url) {
  //Метод для реализации сортировки по столбцам таблицы
  onSort = sortField => {
   const cloneData = this.state.data.concat();
-  const sort = this.state.sort === 'asc' ? 'desc' : 'asc';
+  const sort = this.state.sort === 'desc' ? 'asc' : 'desc';
   const sortDirection = this.state.sortDirection === 'fa fa-arrow-up' ? 'fa fa-arrow-down' : 'fa fa-arrow-up';
   const data = _.orderBy(cloneData, sortField, sort);
   this.setState({ data, sort, sortField, sortDirection})
