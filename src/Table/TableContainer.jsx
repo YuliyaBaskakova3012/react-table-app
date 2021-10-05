@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 import Loader from '../Loader/Loader';
-import {dataSelectedThunk, modeAddChange, onRowSelect, sortActionCreator } from "../table-reducer"
+import {dataSelectedThunk, modeAddChange, onRowSelect, sortActionCreator } from '../table-reducer';
 import Table from './Table';
 class TableContainer extends React.Component {
 render() {

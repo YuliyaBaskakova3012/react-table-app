@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 import UserChoice from './UserChoice';
 class UserChoiceContainer extends React.Component {
 render() {
@@ -11,6 +11,6 @@ return {
 row: state.table.row           
 }
 }
-export default connect(mapStateToProps)(UserChoiceContainer)
+export default connect(mapStateToProps)(UserChoiceContainer);
 
 

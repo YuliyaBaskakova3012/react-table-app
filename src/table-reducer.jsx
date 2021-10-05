@@ -1,15 +1,13 @@
+import { sortD } from './sort';
 
-import { sortD } from "./sort";
-
-const DATASELECTED="DATASELECTED";
-const ADDDATA="ADDDATA"
-const MODEADDCHANGE="MODEADDCHANGE"
-const ADDPERSON="ADDPERSON"
-const ONROWSELECT="ONROWSELECT"
-const PAGECHANGE="PAGECHANGE"
-const SEARCH="SEARCH"
-const SEARCHDATA="SEARCHDATA"
-const SORT="SORT"
+const DATASELECTED='DATASELECTED';
+const ADDDATA='ADDDATA';
+const MODEADDCHANGE='MODEADDCHANGE';
+const ADDPERSON='ADDPERSON';
+const ONROWSELECT='ONROWSELECT';
+const PAGECHANGE='PAGECHANGE';
+const SEARCHDATA='SEARCHDATA';
+const SORT='SORT';
 let initialState = {
 isDataSelected: false,
 isLoading: false,
@@ -20,7 +18,7 @@ sortField: 'id',
 row: null,
 currentPage: 0,
 modeAdd: false,
-sortDirection: "fa fa-arrow-up",
+sortDirection: 'fa fa-arrow-up',
 pageSize: 50
 };
 const tableReducer = (state = initialState, action) => {
@@ -48,7 +46,7 @@ modeAdd: !state.modeAdd
 case ADDPERSON: {
 return {
 ...state,
-data: [{id: action.id, fitstName: action.firstName, lastName: action.lastName, email: action.email, phone: action.phone}, ...state.data]
+data: [{id: action.id, firstName: action.firstName, lastName: action.lastName, email: action.email, phone: action.phone}, ...state.data]
  }
 }
 case ONROWSELECT: {
@@ -66,7 +64,8 @@ currentPage: action.selected
 case SEARCHDATA: {
 return {
 ...state,
-   data: action.result                 
+   data: action.result,
+   currentPage: 0                 
 }
 }
 case SORT: {
@@ -87,15 +86,13 @@ export const modeAddChange= () => ({type: MODEADDCHANGE });
 export const addPerson = (id, firstName, lastName, email, phone) => ({type: ADDPERSON, id, firstName, lastName, email, phone });
 export const onRowSelect = (row) => ({type: ONROWSELECT, row });
 export const pageChangeHandler = ({selected}) => ({type: PAGECHANGE, selected });
-export const searchHandler = (search) => ({type: SEARCH, search });
 export const getSearchDataCreator = (result) => ({type: SEARCHDATA, result});
-export const addData=(data)=>({type: ADDDATA, data})
-export const sortActionCreator=(sortField, data, sort, sortDirection, )=>({type: SORT, sortField, data, sort, sortDirection })
+export const sortActionCreator=(sortField, data, sort, sortDirection)=>({type: SORT, sortField, data, sort, sortDirection});
 export const dataSelectedThunk = (url) => async (dispatch) => {
     dispatch(dataSelected())
-    let res= await fetch(url)
-    let data=await res.json()
+    let res= await fetch(url);
+    let data=await res.json();
     let sortData = sortD('id', data, 'asc', "fa fa-arrow-down");
-    dispatch(sortActionCreator(...sortData))      
+    dispatch(sortActionCreator(...sortData));      
 }
 export default tableReducer;

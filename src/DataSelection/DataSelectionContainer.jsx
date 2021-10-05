@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from "react-redux";
-import {dataSelectedThunk} from "../table-reducer"
+import {connect} from 'react-redux';
+import {dataSelectedThunk} from '../table-reducer';
 import DataSelection from './DataSelection';
 class DataSelectionContainer extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from "react-redux";
-import {getSearchDataCreator} from "../table-reducer";
+import {connect} from 'react-redux';
+import {getSearchDataCreator} from '../table-reducer';
 import SearchBar from './SearchBar';
 class SearchBarContainer extends React.Component {
 render() {
