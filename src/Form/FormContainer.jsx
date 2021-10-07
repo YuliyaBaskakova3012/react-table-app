@@ -3,21 +3,15 @@ import { changeIdCreator, changeFirstNameCreator, changeLastNameCreator, changeE
 import Form from './Form';
 import {connect} from 'react-redux';
 import { addPerson } from '../table-reducer';
-class FormContainer extends React.Component {
-    render() {
-     return  ( <>{this.props.modeAdd?<Form {...this.props}/>:null} 
-     </>
-     )
-    }
-}
-let mapStateToProps = (state) => {
+const FormContainer=(props)=><>{props.modeAdd?<Form {...props}/>:null} </>   
+const mapStateToProps = (state) => {
 return {
 form: state.form,
 data: state.table.data,
 modeAdd: state.table.modeAdd          
 }
 }
-let mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
 return {
 changeId: (id) => {
 dispatch(changeIdCreator(id));

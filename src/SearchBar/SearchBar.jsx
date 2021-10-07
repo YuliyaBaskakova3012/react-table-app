@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 export default props => {
 const [value, setValue] = useState('')
- const valueChangeHandler = event => {
+const valueChangeHandler = event => {
 setValue(event.target.value)
  }
- const onSearch=(search)=>{
-  let result = props.data.filter(item => {
+const onSearch=(search)=>{
+let result = props.data.filter(item => {
     return (
       item['id'].toString().toLowerCase().includes(search.toLowerCase())||
       item['firstName'].toLowerCase().includes(search.toLowerCase()) ||

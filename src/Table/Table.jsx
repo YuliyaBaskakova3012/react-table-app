@@ -10,7 +10,6 @@ sortActionCreator(...sortData);
 }      
 const displayData = _.chunk(data, pageSize)[currentPage];
 return(
-    
     <div>
 <button className='btn btn-secondary' onClick={()=>modeAddChange()} >Добавить</button> 
     <table className='table bg-light'>

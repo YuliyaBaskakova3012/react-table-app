@@ -3,16 +3,10 @@ import {connect} from 'react-redux';
 import Loader from '../Loader/Loader';
 import {dataSelectedThunk, modeAddChange, onRowSelect, sortActionCreator } from '../table-reducer';
 import Table from './Table';
-class TableContainer extends React.Component {
-render() {
-        return  (<>{this.props.isDataSelected?
-            this.props.isLoading?<Loader/>:
-           <Table {...this.props} />
-           :null} 
+const TableContainer =(props)=><>{props.isDataSelected?
+            props.isLoading?<Loader/>:<Table {...props}/>
+            :null} 
                </>
-               )
-    }
-}
 const mapStateToProps = (state) => ({
 data: state.table.data,
 isDataSelected: state.table.isDataSelected,

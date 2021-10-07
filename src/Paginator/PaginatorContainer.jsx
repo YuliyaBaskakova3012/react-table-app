@@ -3,12 +3,8 @@ import {pageChangeHandler, sortActionCreator} from './../table-reducer';
 import {connect} from 'react-redux';
 import Paginator from './Paginator';
 
-class PaginatorContainer extends React.Component {
-     render() {
-     return  ( <Paginator {...this.props}/> )
-}
-}
-let mapStateToProps = (state) => {
+const PaginatorContainer =(props)=><Paginator {...props}/> 
+const mapStateToProps = (state) => {
 return {
   data: state.table.data,
   currentPage: state.table.currentPage,
