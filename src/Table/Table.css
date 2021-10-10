@@ -1,15 +1,11 @@
 th {
    width: 200px;
+
 }
 thead .btn{
     width: 150px;  
 }
-tbody td{
-    width: 200px;    
-}
-.table{
-    width: 1000px;     
-}
+
 tbody tr:hover{
     background-color: teal;
     color: white;
