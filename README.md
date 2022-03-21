@@ -83,4 +83,4 @@ et lacus magna dolor...
 Провинция/штат: <b>WI</b>
 Индекс: <b>22178</b>
 ```
-### Деплой: http://tremendous-roof.surge.sh/
+### Просмотр работы кода: http://tremendous-roof.surge.sh/
