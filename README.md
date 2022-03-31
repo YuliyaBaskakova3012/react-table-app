@@ -83,4 +83,6 @@ et lacus magna dolor...
 Провинция/штат: <b>WI</b>
 Индекс: <b>22178</b>
 ```
+### Использованные технологии и инструменты: React, Redux, Redux-Thunk, Bootstrap, библиотека Lodash.
+
 ### Просмотр работы кода: http://tremendous-roof.surge.sh/
