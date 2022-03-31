@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getSearchDataCreator} from '../table-reducer';
+import {getSearchDataCreator} from '../../redux/table-reducer';
 import SearchBar from './SearchBar';
 const SearchBarContainer=(props)=><>{props.isDataSelected?
 props.isLoading?null:

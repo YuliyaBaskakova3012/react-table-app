@@ -5,7 +5,7 @@ import App from './App';
 import'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import {Provider} from 'react-redux';
-import store from './redux-store';
+import store from './redux/redux-store';
 ReactDOM.render(
       <Provider store={store}>
           <App/>

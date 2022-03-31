@@ -1,4 +1,4 @@
-import { sortD } from './sort';
+import { sortDataFunction } from '../components/common/sortDataFunction';
 
 const DATASELECTED='DATASELECTED';
 const ADDDATA='ADDDATA';
@@ -92,7 +92,7 @@ export const dataSelectedThunk = (url) => async (dispatch) => {
     dispatch(dataSelected())
     let res= await fetch(url);
     let data=await res.json();
-    let sortData = sortD('id', data, 'asc', "fa fa-arrow-down");
+    let sortData = sortDataFunction('id', data, 'asc', "fa fa-arrow-down");
     dispatch(sortActionCreator(...sortData));      
 }
 export default tableReducer;

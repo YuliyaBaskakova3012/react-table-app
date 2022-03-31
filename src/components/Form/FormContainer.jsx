@@ -1,8 +1,8 @@
 import React from 'react';
-import { changeIdCreator, changeFirstNameCreator, changeLastNameCreator, changeEmailCreator, changePhoneCreator, formReset } from "../form-reducer";
+import { changeIdCreator, changeFirstNameCreator, changeLastNameCreator, changeEmailCreator, changePhoneCreator, formReset } from "../../redux/form-reducer";
 import Form from './Form';
 import {connect} from 'react-redux';
-import { addPerson } from '../table-reducer';
+import { addPerson } from '../../redux/table-reducer';
 const FormContainer=(props)=><>{props.modeAdd?<Form {...props}/>:null} </>   
 const mapStateToProps = (state) => {
 return {

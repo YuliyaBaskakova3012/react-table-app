@@ -1,11 +1,11 @@
 import React from 'react';
 import './Table.css';
-import sortD from '../sort';
+import sortDataFunction from '../common/sortDataFunction';
 import _ from 'lodash';
 export default ({data, modeAddChange, onRowSelect, currentPage, sortActionCreator, sort, sortDirection, pageSize})=>{
 
 let onSort = sortField => {
-let sortData=sortD(sortField, data, sort, sortDirection);
+let sortData=sortDataFunction(sortField, data, sort, sortDirection);
 sortActionCreator(...sortData);
 }      
 const displayData = _.chunk(data, pageSize)[currentPage];

@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Loader from '../Loader/Loader';
-import {dataSelectedThunk, modeAddChange, onRowSelect, sortActionCreator } from '../table-reducer';
+import Preloader from '../common/Preloader/Preloader';
+import {dataSelectedThunk, modeAddChange, onRowSelect, sortActionCreator } from '../../redux/table-reducer';
 import Table from './Table';
 const TableContainer =(props)=><>{props.isDataSelected?
-            props.isLoading?<Loader/>:<Table {...props}/>
+            props.isLoading?<Preloader/>:<Table {...props}/>
             :null} 
                </>
 const mapStateToProps = (state) => ({

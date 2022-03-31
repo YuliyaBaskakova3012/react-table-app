@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {dataSelectedThunk} from '../table-reducer';
+import {dataSelectedThunk} from '../../redux/table-reducer';
 import DataSelection from './DataSelection';
 const DataSelectionContainer=(props)=><>{props.isDataSelected?null:<DataSelection {...props} />} </>
 const mapStateToProps = (state) => ({

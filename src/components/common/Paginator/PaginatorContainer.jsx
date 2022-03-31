@@ -1,5 +1,5 @@
 import React from 'react';
-import {pageChangeHandler, sortActionCreator} from './../table-reducer';
+import {pageChangeHandler, sortActionCreator} from '../../../redux/table-reducer';
 import {connect} from 'react-redux';
 import Paginator from './Paginator';
 
