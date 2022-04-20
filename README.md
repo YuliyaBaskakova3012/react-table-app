@@ -85,4 +85,4 @@ et lacus magna dolor...
 ```
 ### Использованные технологии и инструменты: React, Redux, Redux-Thunk, Bootstrap, библиотека Lodash.
 
-### Просмотр работы кода: http://tremendous-roof.surge.sh/
+### [Просмотр работы кода](http://knowledgeable-group.surge.sh/)
